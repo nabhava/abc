@@ -1,22 +1,15 @@
 import java.util.*;
 import java.lang.*;
 class Paging {
-    static int exponentof2(int a) {
-        int c = 0;
-        while (a != 1) {
-            a = a / 2;
-            c = c + 1;
-        }
-        return c;
-    }
+
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter no of bits in logical address : ");
+        System.out.print("Enter no of bits in logical address : ");
         int m = sc.nextInt();
-        System.out.println("Enter the page size in bytes : ");
+        System.out.print("Enter the page size in bytes : ");
         int p = sc.nextInt();
-        int pageoffset = exponentof2(p);
-        System.out.println("Enter no of bits in physical address : ");
+        int pageoffset = Integer.numberOfTrailingZeros(p);
+        System.out.print("Enter no of bits in physical address : ");
         int n = sc.nextInt();
         int laddrspace = (int) Math.pow(2, m);
         int paddrspace = (int) Math.pow(2, n);
@@ -39,7 +32,6 @@ class Paging {
             f = sc.nextInt();
             page[i] = f;
             frame[f] = i;
-            System.out.println();
         }
         System.out.println("Pageno\tFrameno");
         for (i = 0; i < pages; i++) {
@@ -60,30 +52,23 @@ class Paging {
 }
 
 /*OUTPUT
-Enter no of bits in logical address : 
-4
-Enter the page size in bytes : 
-4
-Enter no of bits in physical address : 
-4
+Enter no of bits in logical address : 4
+Enter the page size in bytes : 4
+Enter no of bits in physical address : 4
 Enter frame number for page - 0:0
-
 Enter frame number for page - 1:2
-
 Enter frame number for page - 2:1
-
 Enter frame number for page - 3:2
-
-Pageno  Frameno
-0       0
-1       2
-2       1
-3       2
-Frameno pageno
-0       0
-1       2
-2       3
-3       -1
+Pageno	Frameno
+0	0
+1	2
+2	1
+3	2
+Frameno	pageno
+0	0
+1	2
+2	3
+3	-1
 Enter the logical address : 
 5
 9
