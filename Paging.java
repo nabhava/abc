@@ -1,5 +1,6 @@
+package labexam;
+
 import java.util.*;
-import java.lang.*;
 class Paging {
 
     public static void main(String args[]) {
@@ -18,9 +19,12 @@ class Paging {
         int page[] = new int[pages];
         int frame[] = new int[frames];
         table(page, pages, frame, frames);
-        System.out.println("Enter the logical address : ");
+        System.out.print("Enter the logical address : ");
         int laddr = sc.nextInt();
-        int paddr = physical(laddr, page, pages, frame, frames, p);
+        int pageno = laddr / p;
+        int d = laddr % p;
+        int paddrr = page[pageno] * p + d;
+        System.out.println("Physical Address : "+paddrr);
     }
     static void table(int page[], int pages, int frame[], int frames) {
         int f, i;
@@ -40,13 +44,6 @@ class Paging {
         for (i = 0; i < frames; i++) {
             System.out.println(i + "\t" + frame[i]);
         }
-    }
-    static int physical(int laddr, int page[], int pages, int frame[], int frames, int p) {
-        int pageno = laddr / p;
-        int d = laddr % p;
-        int paddrr = page[pageno] * p + d;
-        System.out.println(paddrr);
-        return paddrr;
     }
 }
 
@@ -68,7 +65,6 @@ Frameno	pageno
 1	2
 2	3
 3	-1
-Enter the logical address : 
-5
-9
+Enter the logical address : 5
+Physical Address : 9
 */
