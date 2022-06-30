@@ -25,8 +25,7 @@ class Paging {
     static void table(int page[], int pages, int frame[], int frames) {
         int f, i;
         Scanner sc = new Scanner(System.in);
-        for (i = 0; i < frames; i++)
-            frame[i] = -1;
+        Arrays.fill(frame,-1);
         for (i = 0; i < pages; i++) {
             System.out.print("Enter frame number for page - " + i + ":");
             f = sc.nextInt();
