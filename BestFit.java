@@ -30,16 +30,16 @@ public class BestFit {
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter block size: ");
+        System.out.print("Enter block size: ");
         int m = sc.nextInt();
-        System.out.println("Enter process size: ");
+        System.out.print("Enter process size: ");
         int n = sc.nextInt();
-        int blockSize[] = new int[n];
-        int processSize[] = new int[m];
-        System.out.println("Enter blocks: ");
+        int blockSize[] = new int[m];
+        int processSize[] = new int[n];
+        System.out.print("Enter blocks: ");
         for (int i = 0; i < m; i++)
             blockSize[i] = sc.nextInt();
-        System.out.println("Enter processes: ");
+        System.out.print("Enter processes: ");
         for (int i = 0; i < n; i++)
             processSize[i] = sc.nextInt();
         bestFit(blockSize, m, processSize, n);
