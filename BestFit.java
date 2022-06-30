@@ -47,14 +47,10 @@ public class BestFit {
 }
 
 /*OUTPUT
-Enter block size: 
-5
-Enter process size: 
-4
-Enter blocks: 
-100 500 200 300 600
-Enter processes: 
-212 417 112 426
+Enter block size: 5
+Enter process size: 4
+Enter blocks: 100 500 200 300 600
+Enter processes: 212 417 112 426
 
 Process No.	Process Size	Block no.
  	1			212				4
