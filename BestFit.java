@@ -2,8 +2,7 @@ import java.util.*;
 public class BestFit {
     static void bestFit(int blockSize[], int m, int processSize[], int n) {
         int allocation[] = new int[n];
-        for (int i = 0; i < allocation.length; i++)
-            allocation[i] = -1;
+        Arrays.fill(allocation,-1);
         for (int i = 0; i < n; i++) {
             int bestIdx = -1;
             for (int j = 0; j < m; j++) {
@@ -32,18 +31,18 @@ public class BestFit {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter block size: ");
-        int n = sc.nextInt();
-        System.out.println("Enter process size: ");
         int m = sc.nextInt();
+        System.out.println("Enter process size: ");
+        int n = sc.nextInt();
         int blockSize[] = new int[n];
         int processSize[] = new int[m];
         System.out.println("Enter blocks: ");
-        for (int i = 0; i < n; i++)
+        for (int i = 0; i < m; i++)
             blockSize[i] = sc.nextInt();
         System.out.println("Enter processes: ");
-        for (int i = 0; i < m; i++)
+        for (int i = 0; i < n; i++)
             processSize[i] = sc.nextInt();
-        bestFit(blockSize, n, processSize, m);
+        bestFit(blockSize, m, processSize, n);
     }
 }
 
