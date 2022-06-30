@@ -1,5 +1,3 @@
-package labexam;
-
 import java.util.*;
 class Paging {
 
