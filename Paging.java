@@ -7,7 +7,6 @@ class Paging {
         int m = sc.nextInt();
         System.out.print("Enter the page size in bytes : ");
         int p = sc.nextInt();
-        int pageoffset = Integer.numberOfTrailingZeros(p);
         System.out.print("Enter no of bits in physical address : ");
         int n = sc.nextInt();
         int laddrspace = (int) Math.pow(2, m);
