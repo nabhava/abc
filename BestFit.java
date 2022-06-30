@@ -15,7 +15,7 @@ public class BestFit {
             }
             if (bestIdx != -1) {
                 allocation[i] = bestIdx;
-                blockSize[bestIdx] -= processSize[i];
+                blockSize[bestIdx] = 0;
             }
         }
         System.out.println("\nProcess No.\tProcess Size\tBlock no.");
