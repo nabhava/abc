@@ -1,7 +1,3 @@
-/*DESCRIPTION
-Single threaded processes contain the execution of instructions in a single sequence. In other words, one command is processes at a time. The opposite of single threaded processes are multithreaded processes. These processes allow the execution of multiple parts of a program at the same time.
-*/
-
 public class SingleThread implements Runnable {
     int a = 20, b = 10;
     public void run() {
