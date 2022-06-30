@@ -1,6 +1,3 @@
-/*DESCRIPTION
-Interprocess communication is the mechanism provided by the operating system that allows processes to communicate with each other. This communication could involve a process letting another process know that some event has occurred or the transferring of data from one process to another.
-*/
 class Bucket {
     int x;
     boolean full = false;
