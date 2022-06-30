@@ -1,6 +1,3 @@
-/*DESCRIPTION
-The best fit deals with allocating the smallest free partition which meets the requirement of the requesting process. This algorithm first searches the entire list of free partitions and considers the smallest hole that is adequate. It then tries to find a hole which is close to actual process size needed.
-*/
 import java.util.*;
 public class BestFit {
     static void bestFit(int blockSize[], int m, int processSize[], int n) {
