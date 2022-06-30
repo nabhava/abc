@@ -1,16 +1,3 @@
-/*DESCRIPTION
-This problem is based on a hypothetical scenario where there is a barbershop with one barber. The barbershop is divided into two rooms, the waiting room, and the workroom. The waiting room has n chairs for waiting customers, and the workroom only has a barber chair.
-
-Now, if there is no customer, then the barber sleeps in his own chair(barber chair). Whenever a customer arrives, he has to wake up the barber to get his haircut. If there are multiple customers and the barber is cutting a customer's hair, then the remaining customers wait in the waiting room with "n" chairs(if there are empty chairs), or they leave if there are no empty chairs in the waiting room.
-
-The sleeping barber problem may lead to a race condition. This problem has occurred because of the actions of both barber and customer.
-
-Example to explain the problem:
-
-Suppose a customer arrives and notices that the barber is busy cutting the hair of another customer, so he goes to the waiting room. While he is on his way to the waiting room, the barber finishes his job and sees the waiting room for other customers. But he(the barber) finds no one in the waiting room (as the customer has yet not arrived in the waiting room), so he sits down in his chair(barber chair) and sleeps. Now the barber is waiting for new customers to wake him up, and the customer is waiting as he thinks the barber is busy.
-
-Here, both of them are waiting for each other, which leads to race conditions.
-*/
 import java.util.concurrent * ;
 public class SleepingBarber extends Thread {
     public static Semaphore customers = new Semaphore(0);
